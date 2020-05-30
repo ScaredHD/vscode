@@ -1,5 +1,5 @@
-    /* vscode (global) user setting */
-    
+/* vscode (global) user setting */  
+{
     // editor setting
     "editor.fontSize": 18,
 
@@ -15,3 +15,4 @@
     // Controls whether a top border is drawn on modified (dirty) editor tabs or not.
 
     "workbench.editor.highlightModifiedTabs": true,
+}
