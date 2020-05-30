@@ -1,0 +1,165 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    /************
+     text editing
+     ************/
+    {
+        "key": "enter",
+        "command": "-acceptSelectedSuggestionOnEnter",
+        "when": "acceptSuggestionOnEnter && suggestWidgetVisible && suggestionMakesTextEdit && textInputFocus"
+    },
+    // cursor: down
+    {
+        "key": "alt+k",
+        "command": "cursorDown",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "down",
+        "command": "cursorDown",
+        "when": "textInputFocus"
+    },
+
+    // cursor: up
+    {
+        "key": "alt+i", 
+        "command": "cursorUp",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "up",
+        "command": "cursorUp",
+        "when": "textInputFocus"
+    },
+
+    // cursor: left
+    {
+        "key": "alt+j",
+        "command": "cursorLeft",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "left",
+        "command": "cursorLeft",
+        "when": "textInputFocus"
+    },
+
+    //cursor: right
+    {
+        "key": "alt+l",
+        "command": "cursorRight",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "right",
+        "command": "cursorRight",
+        "when": "textInputFocus"
+    },
+    // end
+    {
+        "key": "alt+o",
+        "command": "cursorEnd",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "end",
+        "command": "-cursorEnd",
+        "when": "textInputFocus"
+    },
+    // home
+    {
+        "key": "alt+u",
+        "command": "cursorHome",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "home",
+        "command": "-cursorHome",
+        "when": "textInputFocus"
+    },
+
+    {
+        "key": "shift+right",
+        "command": "cursorRightSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+alt+l",
+        "command": "cursorRightSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+left",
+        "command": "cursorLeftSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+alt+j",
+        "command": "cursorLeftSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+alt+k",
+        "command": "cursorDownSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+shift+down",
+        "command": "-cursorDownSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+alt+i",
+        "command": "-editor.action.insertCursorAtEndOfEachLineSelected",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+i",
+        "command": "cursorUpSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+shift+up",
+        "command": "-cursorUpSelect",
+        "when": "textInputFocus"
+    },
+
+
+
+
+    /**************
+     LaTex snippets
+     **************/
+    {
+        "key": "ctrl+Q",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == 'latex' || editorLangId == 'markdown'",
+        "args": {
+            "snippet": "\\$ $TM_SELECTED_TEXT$0 \\$"
+        }
+    },
+    {
+        "key": "ctrl+shift+Q",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == 'latex' || editorLangId == 'markdown'",
+        "args": {
+            "snippet": "\\[ $TM_SELECTED_TEXT$0 \\]"
+        }
+    },
+    {
+        "key": "ctrl+shift+B",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == 'latex'",
+        "args": {
+            "snippet": "\\textbf{$TM_SELECTED_TEXT}",
+        }
+    },
+    {
+        "key": "ctrl+shift+E",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == 'latex'",
+        "args": {
+            "snippet": "\\begin{$1}\n\t$TM_SELECTED_TEXT\n\\end{$1}$0"
+        }
+    },
+]
