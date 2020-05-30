@@ -10,12 +10,15 @@
     // onlySnippets: Tab complete snippets when their prefix match. 
     // Works best when 'quickSuggestions' aren't enabled.
     "editor.tabCompletion": "onlySnippets",
-    "editor.quickSuggestions": false,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    },
     
     "editor.acceptSuggestionOnEnter": "off",
     "editor.wordWrap": "on",
 
     // Controls whether a top border is drawn on modified (dirty) editor tabs or not.
     "workbench.editor.highlightModifiedTabs": true,
-
 }
