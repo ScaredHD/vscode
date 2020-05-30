@@ -1,0 +1,17 @@
+    /* vscode (global) user setting */
+    
+    // editor setting
+    "editor.fontSize": 18,
+
+    "editor.fontFamily": "Fira Code, 思源黑体",
+
+    "workbench.colorTheme": "One Dark Pro",
+
+    // IMPORTANT !!!
+    // onlySnippets: Tab complete snippets when their prefix match. 
+    // Works best when 'quickSuggestions' aren't enabled.
+    "editor.tabCompletion": "onlySnippets",
+
+    // Controls whether a top border is drawn on modified (dirty) editor tabs or not.
+
+    "workbench.editor.highlightModifiedTabs": true,
