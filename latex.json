@@ -1,0 +1,240 @@
+{
+	"latexhead": {
+		"prefix": "!head",
+		"body": [
+			"\\documentclass[UTF8]{ctexart}",
+			"",
+			"\\usepackage{anyfontsize}",
+			"\\usepackage{geometry}",
+			"\t\\geometry{left=4cm,right=4cm,top=2cm,bottom=2cm}",
+			"\\usepackage{amsmath, amssymb, amsthm}",
+			"\t\\newtheorem{definition}{Definition}",
+			"\\usepackage{caption} \t % 标题",
+			"\\usepackage{xcolor} \t % 颜色",
+			"\\usepackage{graphicx} \t % 引用图片",
+			"\\usepackage{float}",
+			"\\usepackage{framed} \t % 方框 \\begin{framed}",
+			"\\usepackage{tcolorbox}",
+    		"\t\\newtcolorbox{defbox}{colback = blue!20!green!10!white}",
+    		"\t\\newtcolorbox{thmbox}{colback = black!5!white}",
+			"\\usepackage{indentfirst} \t % 首行缩进 ",
+			"\t\\setlength{\\parindent}{0em}",
+			"\\usepackage{setspace} \t % 行间距 \\begin{spacing}{arg}",
+			"\\usepackage{extarrows} \t % 箭头宏包 \\xLongrightarrow ",
+			"\\usepackage{esvect} \t % 向量箭头 \\vv{}",
+			"\\usepackage{siunitx} \t % 国际单位 \\si{unit} \\SI{number}{unit} ",
+			"\\usepackage{esint} \t % 积分符号",
+			"\\usepackage{mathrsfs}",
+			"",
+			"\\pagestyle{empty}",
+			"",
+			"\\begin{document}",
+			"$0",
+			"",
+			"",
+			"\\end{document}"
+		],
+		"description": "basic packages and config."
+	},
+	"newcommand": {
+		"prefix": "!user_latex_snippet",
+		"body": [
+			"% font",
+			"\\newcommand{\\ve}[1]{\\boldsymbol{\\mathbf{#1}}}",
+			"\\newcommand{\\unit}[1]{\\boldsymbol{\\mathbf{\\hat{#1}}}}",
+			"\\newcommand{\\r}{\\mathrm}",
+			"\\newcommand{\\cal}{\\mathcal}",
+			"\\newcommand{\\scr}{\\mathscr}",
+			"% common symbol",
+			"\\newcommand{\\E}{\\mathrm e}",
+			"\\renewcommand{\\I}{\\mathrm i}",
+			"\\newcommand{\\R}{\\mathbb R}",
+			"\\newcommand{\\Z}{\\mathbb Z}",
+			"\\newcommand{\\N}{\\mathbb N}",
+			"\\newcommand{\\Q}{\\mathbb Q}",
+			"\\newcommand{\\C}{\\mathbb C}",
+			"% differentiation",
+			"\\def \\DD #1.#2.#3 {\\dfrac{d^{#1} #2}{d #3^{#1}}}",
+			"\\def \\PP #1.#2.#3 {\\dfrac{\\partial^{#1} #2}{\\partial #3^{#1}}}",
+			"\\def \\dd #1.#2 {\\dfrac{d #1}{d #2}}",
+			"\\def \\pp #1.#2 {\\dfrac{\\partial #1}{\\partial #2}} ",
+			"\\newcommand{\\del}{\\nabla}",
+			"% other",
+			"\\newcommand{\\transp}{^{\\top}}",
+			"\\DeclareMathOperator{\\tr}{tr}",
+		]
+	},
+	"section": {
+		"prefix": "sect",
+		"body": "\\section{$1}$0",
+	},
+	"subsection": {
+		"prefix": "subsect",
+		"body": "\\subsection{$1}$0",
+	},
+	"subsubsection": {
+		"prefix": "subsubsect",
+		"body": "\\subsubsection{$1}$0",
+	},
+	"figure": {
+		"prefix": "!fig",
+		"body": [
+			"\\begin{figure}",
+			"\t\\centering",
+			"\t\\includegraphics[width = ${1:fig_width}\\linewidth]{${2:fig_name}}",
+			"\t\\caption{$3}",
+			"\t\\label{$4}",
+			"\\end{figure}",
+			"$0"
+		],
+		"description": "figure with caption and label"
+	},
+	"begin_env": {
+		"prefix": "beg",
+		"body": [
+			"\\begin{$1}",
+			"\t$0",
+			"\\end{$1}",
+		],
+	},
+	"big_parenthesis": {
+		"prefix": "bigp",
+		"body": "\\big( $0 \\big)",
+	},
+	"Big_parenthesis": {
+		"prefix": "Bigp",
+		"body": "\\Big( $0 \\Big)",
+	},
+	"bigg_parenthesis": {
+		"prefix": "biggp",
+		"body": "\\bigg( $0 \\bigg)",
+	},
+	"big_braket": {
+		"prefix": "bigb",
+		"body": "\\big[ $0 \\big]",
+	},
+	"Big_braket": {
+		"prefix": "Bigb",
+		"body": "\\Big[ $0 \\Big]",
+	},
+	"bigg_braket": {
+		"prefix": "biggb",
+		"body": "\\bigg[ $0 \\bigg]",
+	},
+	"delimiter_p": {
+		"prefix": "lp",
+		"body": "\\left( $0 \\right)"
+	},
+	"delimiter_b": {
+		"prefix": "lb",
+		"body": "\\left[ $0 \\right]"
+	},
+	"delimiter_B": {
+		"prefix": "lB",
+		"body": "\\left\\{ $0 \\right\\\\}"
+	},
+	"delimiter_v": {
+		"prefix": "lv",
+		"body": "\\left| $0 \\right|"
+	},
+	"angle_braket": {
+		"prefix": "angle",
+		"body": [
+			"\\langle $0 \\rangle",
+		],
+	},
+	"delimeter_a": {
+		"prefix": "leftangle",
+		"body": [
+			"\\left\\langle $0 \\right\\rangle",
+		],
+	},
+	"super&sub-script": {
+		"prefix": "__",
+		"body": [
+			"_{$1}^{$2}$0",
+		],
+	},
+	"general_bmatrix_form(4x4)": {
+		"prefix": "gbmatrix",
+		"body": [
+			"\\begin{bmatrix}",
+			"\t$1 & $2 & \\cdots & $3 \\\\\\\\",
+			"\t$4 & $5 & \\cdots & $6 \\\\\\\\",
+			"\t\\vdots & \\vdots & \\ddots & \\vdots \\\\\\\\",
+			"\t$7 & $8 & \\cdots & $0 ",
+			"\\end{bmatrix}",
+		],
+	},
+	"1st_order_derivate": {
+		"prefix": "dd",
+		"body": [
+			"\\dd {$1}.{$2}$0",
+		],
+	},
+	"1st_order_partial": {
+		"prefix": "pp",
+		"body": [
+			"\\pp {$1}.{$2}$0",
+		],
+	},
+	"higher-order_derivate": {
+		"prefix": "DD",
+		"body": [
+			"\\DD {${1:order}}.{$2}.{$3}$0",
+		],
+	},
+	"higher-order_partial": {
+		"prefix": "PP",
+		"body": [
+			"\\PP {${1:order}}.{$2}.{$3}$0",
+		],
+	},
+	"dfraction": {
+		"prefix": "/",
+		"body": [
+			"\\dfrac{$1}{$2}$0",
+		],
+	},
+	"^2": {
+		"prefix": "2",
+		"body": ["^2"],
+	},
+	"^3": {
+		"prefix": "3",
+		"body": ["^3"],
+	},
+	"^-1": {
+		"prefix": "rv",
+		"body": ["^{-1}"],
+	},
+	"superscript": {
+		"prefix": ["^"],
+		"body": ["^{$1}$0"],
+	},
+	"subscript": {
+		"prefix": ["_"],
+		"body": ["_{$1}$0"],
+	},
+	"sqrt": {
+		"prefix": "sqrt",
+		"body": "\\sqrt{$1}$0",
+	},
+	"vector": {
+		"prefix": "v",
+		"body": "\\ve{$1}$0",
+	},
+	"half": {
+		"prefix": "h",
+		"body": "\\dfrac{1}{2}",
+	},
+	"cdot": {
+		"prefix": ".",
+		"body": ["\\cdot"],
+	},
+	"partial": {
+		"prefix": "par",
+		"body": "\\partial",
+	},
+	
+}
