@@ -1,9 +1,10 @@
 {
     // editor setting
     "editor.fontSize": 18,
-
+    
     "editor.fontFamily": "Fira Code, 思源黑体",
-
+    
+    "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "One Dark Pro",
 
     // IMPORTANT !!!
@@ -17,4 +18,6 @@
 
     // Controls whether a top border is drawn on modified (dirty) editor tabs or not.
     "workbench.editor.highlightModifiedTabs": true,
+    "breadcrumbs.enabled": false,
+    
 }
