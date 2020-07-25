@@ -1,8 +1,8 @@
 {
     // editor setting
     "editor.fontSize": 18,
-    
     "editor.fontFamily": "Fira Code, 思源黑体",
+    "editor.fontLigatures": false,
     
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "One Dark Pro",
